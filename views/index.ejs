@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Pokedex</title>
+  </head>
+  <body>
+    <nav>
+        <a href="/pokemon/new">Create a New Pokemon</a>
+
+      </nav>
+    <h1>Pokemons Page</h1>
+    <ul>
+      <% for(let i = 0; i < pokemon.length; i++) { %>
+      <li>
+        <img src="<%=pokemon[i].img %>" alt="Pokemon picture">
+        <a href="/pokemon/<%=i%>"><%=pokemon[i].name %></a>
+        <h3> <%=pokemon[i].type %></h3>
+        <a href="pokemon/<%=i%>/edit">Edit</a>
+        <form action="/pokemon/<%=i%>?_method=DELETE" method="POST">
+            <input type="submit" value="DELETE" />
+          </form>
+        
+      </li>
+      <% } %>
+    </ul>
+
+
+  </body>
+</html>
