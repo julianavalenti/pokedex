@@ -9,18 +9,17 @@
 <body>
 <h1><%=pokemon.name %></h1>
    <h2> 
+    <img src="<%=pokemon.img %>" alt="Pokemon photo">
     Id:<%=pokemon.id; %> 
     Type: <%=pokemon.type; %>
-    <img src="<%=pokemon.img %>" alt="Pokemon photo">
+    
     </h2>
 <h1> STATS</h1>
 <h2>
-    hp: <%=pokemon.stats.hp; %>
+      hp: <%=pokemon.stats.hp; %>
       attack: <%=pokemon.stats.attack; %>
       defense: <%=pokemon.stats.defense; %>
-      spattack: <%=pokemon.stats.spattack; %>
-      spdefense: <%=pokemon.stats.spdefense; %>
-      speed: <%=pokemon.stats.speed; %>
+      
     </h2>
 
 

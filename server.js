@@ -6,8 +6,9 @@ const methodOverride = require("method-override")
 
 
 
-app.use(express.urlencoded({ extended: false }))
+app.use(express.urlencoded({ extended: true}))
 app.use(methodOverride("_method"))
+app.use("/public", express.static('public'));
 
 app.listen(port)
 console.log("listening")
@@ -38,7 +39,7 @@ app.delete("/pokemon/:id", (req, res) => {
 // Update
 // PUT /pokemon/:id
 
-app.put("/pokemon/:id/edit", (req, res) => {
+app.put("/pokemon/:id/", (req, res) => {
     pokemon[req.params.id] = req.body 
     res.redirect("/pokemon") 
   })

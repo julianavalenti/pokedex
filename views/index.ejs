@@ -3,29 +3,40 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Pokedex</title>
-  </head>
+    <title></title>
+    <link rel="stylesheet" href="/public/style.css"/>
+  
+</head>
   <body>
-    <nav>
-        <a href="/pokemon/new">Create a New Pokemon</a>
+    
 
-      </nav>
-    <h1>Pokemons Page</h1>
-    <ul>
-      <% for(let i = 0; i < pokemon.length; i++) { %>
-      <li>
-        <img src="<%=pokemon[i].img %>" alt="Pokemon picture">
-        <a href="/pokemon/<%=i%>"><%=pokemon[i].name %></a>
-        <h3> <%=pokemon[i].type %></h3>
-        <a href="pokemon/<%=i%>/edit">Edit</a>
-        <form action="/pokemon/<%=i%>?_method=DELETE" method="POST">
+      <div class="container">
+        <h1>Pokemons Page</h1>
+        <nav>
+            <a class = "new-pokemon" href="/pokemon/new"><button type="button" >Create a New Pokemon</button></a>
+    
+          </nav>
+            <ul>
+            <% for(let i = 0; i < pokemon.length; i++) { %>
+                <li>
+             <div class="wrap">
+                <a href="/pokemon/<%=i%>">
+                    <img src="<%=pokemon[i].img %>" alt="Pokemon picture">
+                  </a>
+                  
+             <a href="/pokemon/<%=i%>"><%=pokemon[i].name %></a>
+             <h3> <%=pokemon[i].type %></h3>
+             </div>
+        
+            <form action="/pokemon/<%=i%>?_method=DELETE" method="POST">
             <input type="submit" value="DELETE" />
+            <a href="pokemon/<%=i%>/edit"><button type="button" id ="edit" >Edit</button></a>
           </form>
         
-      </li>
+                </li>
       <% } %>
     </ul>
 
-
+    </div>
   </body>
 </html>
