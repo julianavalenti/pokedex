@@ -26,6 +26,7 @@ app.get("/pokemon", (req,res) => {
 
 app.get("/pokemon/new", (req,res) => {
     res.render("new.ejs")
+    
     })
 
     // Destroy

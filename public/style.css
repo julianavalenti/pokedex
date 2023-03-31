@@ -4,7 +4,15 @@
     flex-wrap: wrap;
     align-items: center;
 }
+body {
+    background-color: rgba(90, 41, 100, 0.309);
+}
 
+h1 {
+    font-size: 50px;
+    color: #34113a;
+    font-family: 'Limelight', cursive;
+}
 .new-pokemon {
     text-decoration: none;
 }
